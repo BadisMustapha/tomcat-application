@@ -54,6 +54,15 @@ pipeline{
 	     )
             }
           }
+
+       stage("Deploy To Tomcat") {
+	    steps {
+	      deploy adapters: [tomcat8(url: 'http://localhost:8080/', 
+                              credentialsId: 'tomcat')], 
+                     war: 'target/*.war',
+                     contextPath: 'app'
+	    }
+  	}
 		
        }	       	     	         
 }
