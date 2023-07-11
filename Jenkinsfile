@@ -57,10 +57,10 @@ pipeline{
 
        stage("Deploy To Tomcat") {
 	    steps {
-	      deploy adapters: [tomcat9(url: 'http://localhost:8080/', 
+	      deploy adapters: [tomcat9(url: 'http://localhost:9090/', 
                               credentialsId: 'tomcat')], 
                      war: 'target/*.war',
-                     contextPath: 'app'
+                     contextPath: ''
 	    }
   	}
 		
