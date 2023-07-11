@@ -11,7 +11,7 @@ pipeline{
         stage('Clone Repo'){
 		 steps{
                       script{
-		    	                 git branch: 'main', url: 'https://github.com/Saleemullahpasha/tomcat-application.git'
+		    	                 git branch: 'main', url: 'https://github.com/BadisMustapha/tomcat-application.git'
                       	  }
                	     }  
            
