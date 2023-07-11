@@ -48,7 +48,7 @@ pipeline{
 	        artifacts: [
 	            [artifactId: 'helloworld',
 	             classifier: '',
-	             file: 'target\helloworld.war',
+	             file: 'target\\helloworld.war',
 	             type: 'war']
 	        ]
 	     )
